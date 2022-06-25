@@ -1,1 +1,32 @@
-<h2>Index Page</h2>
+<div>
+<img width=100%, style="margin-right: 40%" src="https://ddaudio.com.ua/theme/img/header.jpg">
+</div>
+<div class="topitem"></div> 
+
+
+
+<h3 style="text-align: center;">Тюнинг и автоаксессуары в интернет-магазине Digital Designs</h3>
+
+
+
+
+
+<div class="main_products_cards">
+{{#if products.length}}
+{{#each products}}
+<div class="product-item">
+    <img src={{Image}}>
+    <div class="product-list"> </div>
+    <h3>{{Name}}</h3>
+    <h3>{{Manufakturer}}</h3>
+    <h3>{{Country}}</h3>
+    <span class="price">{{Price}} </span>
+    <h3>{{Rating}}</h3>
+    </div>
+</div>
+{{/each}}
+{{else }}
+<h2> no product</h2>
+{{/if}}
+
+</div>
