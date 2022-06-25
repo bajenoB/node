@@ -14,7 +14,7 @@ const hbs=expresshandlebars.create({
 })
 
 app.engine('hbs',hbs.engine)
-app.set('view egine','hbs')
+app.set('view engine','hbs')
 app.set('views','views')
 
 app.use(express.urlencoded({
