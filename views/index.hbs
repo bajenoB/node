@@ -1,3 +1,42 @@
+<script><!--
+function Sim_Sim_Otkroysya()
+{
+var obj=document.getElementById('Sim_Sim');
+if(obj.style.display=='none')
+obj.style.display='block';
+else
+obj.style.display='none';
+}
+function Sim_Sim_Otkroysya1()
+{
+var obj=document.getElementById('Sim_Sim1');
+if(obj.style.display=='none')
+obj.style.display='block';
+else
+obj.style.display='none';
+}
+function Sim_Sim_Otkroysya2()
+{
+var obj=document.getElementById('Sim_Sim2');
+if(obj.style.display=='none')
+obj.style.display='block';
+else
+obj.style.display='none';
+}
+
+function chg(id,chk){
+var el = document.getElementById(id);
+var ch = document.getElementById(chk);
+if (el.src.indexOf("down.gif")>0){
+el.src="up.gif"
+ch.checked="true";
+}else{
+el.src="down.gif"
+ch.checked="";
+}
+}
+--></script>
+
 <div>
 <img width=100%, style="margin-right: 40%" src="https://ddaudio.com.ua/theme/img/header.jpg">
 </div>
@@ -11,7 +50,8 @@
 
 
 
-<div class="main_products_cards">
+
+{{!-- <div class="main_products_cards">
 {{#if products.length}}
 {{#each products}}
 <div class="product-item">
@@ -29,4 +69,62 @@
 <h2> no product</h2>
 {{/if}}
 
+</div> --}}
+
+
+<div style="display: flex;">
+
+
+<div class="left_menu">
+    <div><a href='javascript: Sim_Sim_Otkroysya()'>
+<div onClick="chg(this.id,'check')">Категории тюнинга</div></a></div>
+<div name=Sim_Sim id=Sim_Sim style='text-indent:12pt;display:none'>
+<ul>
+<li><a href="#">Страница 1</a>
+<li><a href="#">Страница 2</a>
+<li><a href="#">Страница 3</a>
+</ul>
 </div>
+<div><a href='javascript: Sim_Sim_Otkroysya1()'>
+<div onClick="chg(this.id,'check')">Тип Автомобиля</div></a></div>
+<div name=Sim_Sim1 id=Sim_Sim1 style='text-indent:12pt;display:none'>
+<ul>
+<li><a href="#">Страница 1</a>
+<li><a href="#">Страница 2</a>
+<li><a href="#">Страница 3</a>
+</ul>
+</div>
+<div><a href='javascript: Sim_Sim_Otkroysya2()'>
+<div onClick="chg(this.id,'check')">Каталог</div></a></div>
+<div name=Sim_Sim2 id=Sim_Sim2 style='text-indent:12pt;display:none'>
+<ul>
+<li><a href="#">Страница 1</a>
+<li><a href="#">Страница 2</a>
+<li><a href="#">Страница 3</a>
+</ul>
+</div>
+
+</div>
+
+<div class="container"> 
+    <div class="main_products_cards">
+{{#if products.length}}
+{{#each products}}
+<div class="product-item">
+    <img src={{Image}}>
+    <div class="product-list"> </div>
+    <h3>{{Name}}</h3>
+    <h3>{{Manufakturer}}</h3>
+    <h3>{{Country}}</h3>
+    <span class="price">{{Price}} </span>
+    <h3>{{Rating}}</h3>
+    </div>
+</div>
+{{/each}}
+{{else }}
+<h2> no product</h2>
+{{/if}}
+</div>
+
+</div>
+
