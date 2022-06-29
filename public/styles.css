@@ -1,18 +1,22 @@
 .left_menu{
     display:block;
+    margin-left: 10px;
     
 }
 
 .nigger{
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 500;
     color:#2F67DE;
+    display: block;
+    
     
 }
 .jews{
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     background-color:azure;
+    white-space: nowrap;
 }
 
 
@@ -122,8 +126,9 @@ ul {
     font-family: Consolas;
     transition: .3s ease-in;
     width: 24%;
-    margin-right: 15px;
+    margin-right: 20px;
     margin-bottom: 15px;
+    border: 4px double black;
 }
 
 
@@ -135,10 +140,10 @@ ul {
 .product-item img {
     width: 100%;
     height: auto;
-    border-bottom-right-radius: calc(0.25rem - 1px);
+    /* border-bottom-right-radius: calc(0.25rem - 1px);
     border-bottom-left-radius: calc(0.25rem - 1px);
     border-top-left-radius: calc(0.25rem - 1px);
-    border-top-right-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px); */
     vertical-align: middle;
     box-sizing: border-box;
 }
@@ -150,7 +155,7 @@ ul {
 
 .product-list h3 {
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 100;
     color: #444444;
 }
 .hui{
@@ -186,9 +191,8 @@ ul {
 
 .main_products_cards {
     margin-top: 20px;
-    margin-left: 5%;
+    margin-left: 10%;
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
-
 }
