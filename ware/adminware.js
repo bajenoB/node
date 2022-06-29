@@ -16,7 +16,7 @@ module.exports = function (roles) {
                 return res.status(400).json({message:"You have no access to do it"})
             }
             
-            const{roles: userrole} = jwt.verify(token, secret)
+            const{roles: root} = jwt.verify(token, secret)
             let hasAccess = false
             hasAccess.forEach(role=> {
                 if(roles.includes(role)){

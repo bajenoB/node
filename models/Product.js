@@ -9,7 +9,8 @@ const schema=new Schema({
     Manufakturer:{type:String,required:true, unique: false},
     Image:{type:String,required:true, unique: false},
     Country:{type:String,required:true, unique: false},
-    Rating:{type:Number,required:true, unique: false}
+    Rating:{type:Number,required:true, unique: false},
+    Tuning:{type:String,required:true,unique:false}
     
 })
 module.exports=model('Product',schema)

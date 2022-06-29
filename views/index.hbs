@@ -49,10 +49,7 @@ ch.checked="";
 <img width=100%, style="margin-right: 40%" src="https://ddaudio.com.ua/theme/img/header.jpg">
 </div>
 <div class="topitem">
-    <ul class="nigger"> 
-        <li><a class="jews"href="#">Все для аквапечати</a>
-        <li><a class="jews"href="#">Автолампы </a>
-    </ul>
+    
 </div> 
 
 
@@ -161,7 +158,7 @@ ch.checked="";
     <div class="main_products_cards"> 
 {{#if products.length}}
 {{#each products}}
-<div class="product-item">
+{{!-- <div class="product-item">
     <h3>{{Name}}</h3>
     <img src={{Image}}>
     <div class="product-list"> </div>
@@ -169,7 +166,28 @@ ch.checked="";
     <h5>{{Country}}</h5>
     <span class="price">{{Price}} </span>
     
-    </div>
+    </div> --}}
+    <div class="product-item">
+                <img src={{Image}}>
+                <div class="product-list"> </div>
+                <div class="catalog-item__title es-name"><a href=""
+                    target="_blank">{{Tuning}}</a></div>
+                <div class="catalog-item__title es-name"><a href=""
+                    target="_blank">{{Name}}</a></div>
+                    
+                <div class="catalog-item__garanty">Гарантия ЛУЧШЕЙ ЦЕНЫ в Украине</div>
+                <div class="rating_wrap">
+                <div class="rating_stars_wrap">
+                    <div class="rating_stars">
+                        <div class="rating_stars_fill" style="width: 83.42px;"></div>
+                    </div>
+                </div>
+                <div class="rating__info">{{Rating}}/5 Голосов: 20</div>
+                </div>
+                <div class="catalog-item__prices"> цена <span class="catalog-item__price param-price es-price"> {{Price}} ГРН
+                </span></div>
+                <button class="button">Купить</button>
+            </div>
 {{!-- </div> --}}
 {{/each}}
 {{else }}
