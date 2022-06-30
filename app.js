@@ -6,9 +6,7 @@ const app=express()
 const cookieParser = require('cookie-parser')
 const PORT=config.get('port')
 
-const homeRoute=require('./routes/home.routes')
-const authRoute = require('./routes/auth.routes')
-const adminRoute = require('./routes/admin.routes')
+const homeRoute=require('./routes/home')
 
 
 const hbs=expresshandlebars.create({
@@ -32,8 +30,6 @@ app.use(express.urlencoded({
 }))
 
 app.use(homeRoute)
-app.use('/auth',authRoute)
-app.use('/admin',adminRoute)
 
 
 async function start(){

@@ -68,6 +68,7 @@ class authController {
 
             const token = generateToken(user._id, user.login, user.root)
             res.cookie('session_id', token)
+            console.log(token)
 
             return res.redirect('/')
             // return res.json({token})

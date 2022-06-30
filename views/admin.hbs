@@ -1,24 +1,20 @@
+<div class="container">
+<form action="/createProd" method="post"> 
 
-<div class="auth-stretched">
-    <div class="auth-container" style="padding: 0;">
-        <div class="auth-section" style="width: auto; min-width: 440px">
-            <div class="auth-holder" style="padding: 20px 40px; margin-top: 100px">
-                <div>
-                    <form action="/admin/createProd" method="GET">
-                        <button class="enter-button-field" style="margin-bottom: -12px; margin-top: 20px">Create product</button>
-                    </form>
-                </div>
-                <div>
-                    <form action="/auth/logout" method="POST">
-                        <button class="enter-button-field"style="margin-bottom: -12px">Edit product</button>
-                    </form>
-                </div>
-                <div>
-                    <form action="/auth/logout" method="POST">
-                        <button class="enter-button-field">Delete product</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="input-field"> 
+    <input type="text"name="Name" placeholder="product name">
+    <input type="number"name="Price" placeholder="product price">
+    <input type="text"name="Manufakturer" placeholder="product Manufakturer">
+    <input type="text"name="Country" placeholder="product country">
+    <input type="text"name="Image" placeholder="product image">
+    <input type="number"name="Rating" placeholder="product Rating">
+    <input type="text"name="Tuning" placeholder="product Tuning">
+</div>
+
+<button type="submit"class="btn">Create </button>
+</form>
+
+
+
+<h2>admin Page</h2>
 </div>

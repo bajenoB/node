@@ -8,30 +8,22 @@ const secret = config.get('jwtSecret') || 3000
 class commonController 
 {
     async getRegisterPage(req, res) {
-        const token = req.cookies.session_id
-        if (token) {
-            res.redirect('profile')
-        }
-        else {
-
+        
             res.render('regist', {
                 title: 'Register',
                 IsLogin: true
             })
-        }
+        
     }
 
     async getLoginPage(req, res) {
-        const token = req.cookies.session_id
-        if (token) {
-            res.redirect('profile')
-        }
-        else {
+        
+        
             res.render('login', {
                 title: 'Auth',
                 IsLogin: true
             })
-        }
+        
 
     }
     async getIndex(req, res) {
@@ -39,7 +31,6 @@ class commonController
 
         res.render('index', {
             title: 'ddaudio',
-            IsStore: true,
             products
         })
     }
@@ -87,23 +78,25 @@ class commonController
         else res.redirect('/login')
     }
     async getAdminPage(req, res) {
-
         try {
             const token = req.cookies.session_id
 
             const decodedData = jwt.verify(token, secret)
             let login = decodedData.login
 
+            let role=decodedData.root
+
             const usercheck = await User.findOne({ login })
 
             if (usercheck) {
                 const required_role = "ADMIN"
+
                 let hasAccess = false
-                usercheck.role.forEach(x => {
-                    if (required_role == x) {
+                
+                    if (required_role == role) 
+                    {
                         hasAccess = true
                     }
-                })
                 
 
                 if (hasAccess) {
@@ -123,7 +116,7 @@ class commonController
             console.log(error)
             res.redirect('/')
         }
-    }
+    }   
 
 }
 
